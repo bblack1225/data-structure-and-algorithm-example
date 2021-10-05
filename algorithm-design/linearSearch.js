@@ -1,5 +1,5 @@
 const arr = [10, 11, 15, 17, 16, 20, 55, 63];
-
+// 線性搜尋
 const linearSearch = (arr, n) => {
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] == n) return i;

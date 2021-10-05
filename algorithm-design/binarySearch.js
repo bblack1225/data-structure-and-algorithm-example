@@ -2,7 +2,7 @@ const nums = [
   5, 10, 12, 13, 19, 34, 37, 44, 49, 54, 54, 61, 63, 68, 74, 76, 79, 80, 85, 88,
   97, 99,
 ];
-
+//二元搜尋法
 const binarySearch = (arr, n) => {
   let min = 0;
   let max = arr.length - 1;
