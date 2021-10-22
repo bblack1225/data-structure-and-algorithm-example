@@ -12,20 +12,23 @@ function buildMaxHeap() {
 function maxHeapify(i) {
   let l = i * 2 + 1;
   let r = i * 2 + 2;
-  let largest = i;
-  if (l <= heapSize && arr[l] > arr[i]) {
-    largest = l;
+  // let largest = i;
+  let min = i;
+  if (l <= heapSize && arr[l] < arr[i]) {
+    // largest = l;
+    min = l;
   }
 
-  if (r <= heapSize && arr[r] > arr[largest]) {
-    largest = r;
+  if (r <= heapSize && arr[r] < arr[min]) {
+    // largest = r;
+    min = r;
   }
 
-  if (largest != i) {
+  if (min != i) {
     let temp = arr[i];
-    arr[i] = arr[largest];
-    arr[largest] = temp;
-    maxHeapify(largest);
+    arr[i] = arr[min];
+    arr[min] = temp;
+    maxHeapify(min);
   }
 }
 
